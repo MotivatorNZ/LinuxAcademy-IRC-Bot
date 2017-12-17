@@ -8,17 +8,17 @@ ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #For example, if we ever want to connect to a list of channels (instead of just one as in this example) or change to a different server or channel we don’t have to find every instance 
 #and can just edit this variable instead.
 #I’m using chat.freenode.net for this example. Other IRC networks will have you put in their name here.
-server = "chat.freenode.net" # Server
+server = "irc.snoonet.org" # Server
 #We don’t want to use and official/established channel while we do our testing. Aside from being rude, many channels have specific rules for bots or don’t allow them at all. 
 #Make sure you check with a channel’s moderators before adding your bot to a channel. For our testing, we’re using a custom, unregistered room (Denoted by the ‘##’ before the channel name on Freenode). 
 #This way we’ll be the only ones in the channel with the bot while we do our testing.
-channel = "##bot-testing" # Channel
+channel = "##Botivator" # Channel
 #This is what we’ll be naming the bot. It is how other users will see the bot in the channel. 
 #Make sure this is an unused and unregistered nick as your bot won’t be able to connect if it’s already in use and it will be assigned a random name after 30s if it’s a registered and protected nick. 
 #See here for more information on Nickname registration: https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial#Nickname_registration
-botnick = "IamaPythonBot" # Your bots nick.
+botnick = "Botivator" # Your bots nick.
 #This will be used in one of our functions. All we’re doing is defining a nickname that can send administrative commands to the bot and an exit code to look for to end the bot. We’ll get to how to do this at the end.
-adminname = "OrderChaos" #Your IRC nickname. I go by OrderChaos on IRC (and most other places) so that is what I'm using for this example.
+adminname = "MotivatorAFK" #Your IRC nickname. I go by OrderChaos on IRC (and most other places) so that is what I'm using for this example.
 exitcode = "bye " + botnick #Text that we will use
 #To connect to IRC we need to use our socket variable (ircsock) and connect to the server. IRC is typically on port 6667 or 6697 (6697 is usually for IRC with SSL which is more secure). 
 #We’ll be using 6667 for our example. We need to have the server name (established in our Global Variables) and the port number inside parentheses so it gets passed as a single item to the connection.
